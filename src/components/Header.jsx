@@ -26,7 +26,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         {/* logo */}
-        <a href="#">
+        <a href="">
           {/*<img src={Logo} alt='logo image' />*/}
           <h1 className=" text-1xs uppercase font-bold ">
             <span className="text-1xs text-wrap text-green-700 font-extrabold">Miracle</span>  <span className="text-2xs text-wrap">Osteo Pain Relief
