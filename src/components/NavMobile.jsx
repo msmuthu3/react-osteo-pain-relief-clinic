@@ -39,7 +39,8 @@ const NavMobile = () => {
                 to={item.href}
                 activeClass='active'
                 spy={true}
-                offset={-220}
+                offset={-100}
+                onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>

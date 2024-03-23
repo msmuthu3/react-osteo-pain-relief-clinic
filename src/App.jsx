@@ -3,9 +3,9 @@ import React from "react";
 // import components
 import Banner from "./components/Banner";
 import Testimonials from "./components/Testimonials";
-import Skills from "./components/Skills";
-import Team from "./components/Team";
-import Subscribe from "./components/Subscribe";
+import Massages from "./components/Massages";
+import SpecialTreatments from "./components/SpecialTreatments";
+import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
@@ -15,8 +15,9 @@ const App = () => {
       <div>
         <Banner />
         <Testimonials />
-        <Skills />
-        <Team />
+        <Massages/>
+        <SpecialTreatments />
+        <Pricing />
         <Contact />
         <Footer />
         <BackToTop />
