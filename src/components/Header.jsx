@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import "../index.css"
 // import components
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
@@ -9,7 +10,7 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         setBg(true);
       } else {
         setBg(false);
@@ -28,11 +29,11 @@ const Header = () => {
         <a href="#">
           {/*<img src={Logo} alt='logo image' />*/}
           <h1 className=" text-1xs uppercase font-bold ">
-            <span className="text-1xs text-green-700 font-extrabold">Miracle</span>  <span className="text-2xs">Osteo Pain Relief
+            <span className="text-1xs text-wrap text-green-700 font-extrabold">Miracle</span>  <span className="text-2xs text-wrap">Osteo Pain Relief
             Clinic</span>
           </h1>
         </a>
-        <span className={"text-1xs"} ><PhoneInTalkIcon /> +1-(437)-326-7273</span>
+        <span className={"text-1xs p-2"} ><PhoneInTalkIcon /> +1-(437)-326-7273</span>
           {/* nav */}
         <Nav />
         {/* nav mobile */}

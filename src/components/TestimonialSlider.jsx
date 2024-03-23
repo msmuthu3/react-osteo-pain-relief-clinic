@@ -42,7 +42,7 @@ const TestimonialSlider = () => {
             <SwiperSlide key={index}>
               <div className="relative lg:mt-[24px] before:content-quote p-8">
                 <div>
-                  <p className="text-2xl">{text}</p>
+                  <p className="text-1xl">{text}</p>
                   <div className="flex items-center mt-[1px]">
                     <img src={image} alt="" />
                     <div className="ml-4">

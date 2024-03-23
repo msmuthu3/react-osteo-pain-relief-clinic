@@ -8,30 +8,45 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import SpaIcon from '@mui/icons-material/Spa';
-import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import {blue, red} from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AyurMassages from  "../assets/img/ayurveda/herbal_bath.png"
 import AyurTreatments from "../assets/img/ayurveda/hipbath.png"
 import OsteoTreatments from "../assets/img/ayurveda/Osteopathy.jpeg"
-import {Grid, Paper} from "@mui/material";
+import {Paper} from "@mui/material";
 import "../index.css"
-import {Fade, Slide} from "react-awesome-reveal";
-
-
+import {Fade} from "react-awesome-reveal";
 
 
 
 const Massages = () => {
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded1, setExpanded1] = React.useState(false);
+    const [expanded2, setExpanded2] = React.useState(false);
+    const [expanded3, setExpanded3] = React.useState(false);
 
 
-    const ExpandMore = styled((props: ExpandMoreProps) => {
+    const ExpandMore1 = styled((props: ExpandMoreProps) => {
+        const { expand, ...other } = props;
+        return <IconButton {...other} />;
+    })(({ theme, expand }) => ({
+        transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+        marginLeft: 'auto',
+        transition: theme.transitions.create('transform', {
+            duration: theme.transitions.duration.shortest,
+        }),
+    }));
+    const ExpandMore2 = styled((props: ExpandMoreProps) => {
+        const { expand, ...other } = props;
+        return <IconButton {...other} />;
+    })(({ theme, expand }) => ({
+        transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+        marginLeft: 'auto',
+        transition: theme.transitions.create('transform', {
+            duration: theme.transitions.duration.shortest,
+        }),
+    }));
+    const ExpandMore3 = styled((props: ExpandMoreProps) => {
         const { expand, ...other } = props;
         return <IconButton {...other} />;
     })(({ theme, expand }) => ({
@@ -42,8 +57,14 @@ const Massages = () => {
         }),
     }));
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
+    const handleExpandClick1 = () => {
+        setExpanded1(!expanded1);
+    };
+    const handleExpandClick2 = () => {
+        setExpanded2(!expanded2);
+    };
+    const handleExpandClick3 = () => {
+        setExpanded3(!expanded3);
     };
 
     const Item = styled(Paper)(({ theme }) => ({
@@ -58,7 +79,7 @@ const Massages = () => {
         <section id="massages" style={{backgroundColor: "#d4ebf2", paddingTop: 2}} className="section bg-[#b4f9fda1] pb-32 ">
 
             <Fade>
-            <h1 className="font-primary font-black text-4xl lg:text-6xl text-primary text-center -mt-1 mb-4 lg:mt-[40px] leading-tight lg:leading-[90px]">
+            <h1 className="font-primary font-black text-4xl lg:text-6xl text-primary text-center  mb-4 lg:mt-[40px] leading-tight lg:leading-[90px]">
                 <span className="text-accent">What We Offer</span>
             </h1>
             </Fade>
@@ -81,16 +102,16 @@ const Massages = () => {
                         </Typography>
                     </CardContent>
                     <CardActions disableSpacing>
-                        <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
+                        <ExpandMore1
+                            expand={expanded1}
+                            onClick={handleExpandClick1}
+                            aria-expanded={expanded1}
                             aria-label="show more"
                         >
                         <ExpandMoreIcon />
-                        </ExpandMore>
+                        </ExpandMore1>
                     </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <Collapse in={expanded1} timeout="auto" unmountOnExit>
                         <CardContent>
                             <Typography paragraph color="BLUE">What Kind of Ayurvedic Massage Is Best for Each Dosha? </Typography>
                             <Typography paragraph >
@@ -132,16 +153,16 @@ const Massages = () => {
                                 Ayurveda highly recommends body purification and detoxification before starting a therapy or a treatment.</Typography>
                         </CardContent>
                         <CardActions disableSpacing>
-                            <ExpandMore
-                                expand={expanded}
-                                onClick={handleExpandClick}
-                                aria-expanded={expanded}
+                            <ExpandMore2
+                                expand={expanded2}
+                                onClick={handleExpandClick2}
+                                aria-expanded={expanded2}
                                 aria-label="show more"
                             >
                                 <ExpandMoreIcon />
-                            </ExpandMore>
+                            </ExpandMore2>
                         </CardActions>
-                        <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        <Collapse in={expanded2} timeout="auto" unmountOnExit>
                             <CardContent>
                                 <Typography paragraph color="BLUE">Panchakarma therapy: </Typography>
                                 <Typography paragraph>
@@ -189,16 +210,16 @@ const Massages = () => {
                                  Treatment most closely resembles chiropractic or physiotherapy treatment, however there are some important distinctions, and generally, the treatment timelines with osteopathic care are much shorter.</Typography>
                          </CardContent>
                          <CardActions disableSpacing>
-                             <ExpandMore
-                                 expand={expanded}
-                                 onClick={handleExpandClick}
-                                 aria-expanded={expanded}
+                             <ExpandMore3
+                                 expand={expanded3}
+                                 onClick={handleExpandClick3}
+                                 aria-expanded={expanded3}
                                  aria-label="show more"
                              >
                                  <ExpandMoreIcon />
-                             </ExpandMore>
+                             </ExpandMore3>
                          </CardActions>
-                         <Collapse in={expanded} timeout="auto" unmountOnExit>
+                         <Collapse in={expanded3} timeout="auto" unmountOnExit>
                              <CardContent>
                                  <Typography paragraph color="BLUE">Manual Osteopathy treatment: </Typography>
                                  <Typography paragraph className="lg:flex space-x-6 font-body font-bold text-sm text-primary">
